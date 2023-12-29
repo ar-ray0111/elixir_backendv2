@@ -12,9 +12,9 @@ CHOICES = [
 class Events(models.Model):
     name = models.CharField(max_length=100)
     event_summary = models.TextField()
-    form_link = models.URLField()
-    date = models.DateField()
-    img_link = models.URLField()
+    registration_link = models.URLField()
+    time = models.DateField()
+    poster = models.URLField()
     club = models.CharField(choices=CHOICES, default='GFG')
 
     def __str__(self):
