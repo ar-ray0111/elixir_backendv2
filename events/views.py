@@ -12,7 +12,7 @@ def index(request):
 
 @api_view(['GET'])
 def get_events(request):
-    events = Events.objects.all().order_by('-id')
+    events = Events.objects.all().order_by('-date')
     serializer = EventSerializer(events, many=True)
 
     return Response(serializer.data)
